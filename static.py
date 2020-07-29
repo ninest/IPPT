@@ -11,6 +11,12 @@ class Station(Enum):
 
 
 def get_score(station: Station, age: int, reps: int):
+  """Returns a tuple of (score, reps needed to next point)
+  
+  station is an enum, either Station.situp or Station.pushup
+  age, reps are integers
+  """
+
   if station == Station.situp:
     score_table = situp_score_table
   else:

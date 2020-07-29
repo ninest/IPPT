@@ -1,13 +1,15 @@
-first_age_map = {
-    "min": 0,
-    "max": 21,
-    "group": 1
-}
 
 
 age_map = {
-  1: first_age_map
+    # provide first age group and generate the next
+    1: {
+        "min": 0,
+        "max": 21,
+        "group": 1
+    }
 }
+
+# generate the 14 age groups
 for i in range(1, 14):
   previous_age_map = age_map[i]
 
@@ -25,9 +27,10 @@ for i in range(1, 14):
   age_map[current_age_group] = current_age_map
 
 
-
 def get_age_group(age):
-  # search in all age maps to see if the provided age is between the min and max
+  """Search in all age maps to see if the provided age is between the min and max
+  """
+
   for age_group, age_dict in age_map.items():
     if age_dict["min"] <= age <= age_dict["max"]:
       return age_group
