@@ -16,9 +16,6 @@ def get_score(station: Station, age: int, reps: int):
   else:
     score_table = pushup_score_table
 
-  age = 18
-  reps = 35
-
   age_group = get_age_group(age)
 
   # get the score set for the age group
@@ -30,5 +27,8 @@ def get_score(station: Station, age: int, reps: int):
   score_set += [0] * zeroes
 
   # get the score
-  score = score_set[::-1][reps]
-  print(score)
+  # remember that arrays start with 0 but reps start with 1
+  score = score_set[::-1][reps - 1]
+
+  return score
+
