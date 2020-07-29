@@ -10,8 +10,8 @@ reps = 35
 age_group = get_age_group(age)
 
 # get the score set for the age group
-score_set = score_table[age_group]["scoreSet"]
-top_score_reps = score_table[age_group]["topScoreReps"]
+score_set = score_table[age_group]["score_set"]
+top_score_reps = score_table[age_group]["top_score_reps"]
 
 # add zeroes to padd the end
 zeroes = top_score_reps - len(score_set)
