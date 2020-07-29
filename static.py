@@ -22,7 +22,6 @@ def get_score(station: Station, age: int, reps: int):
   score_set = score_table[age_group]["score_set"]
   top_score_reps = score_table[age_group]["top_score_reps"]
 
-
   # add zeroes to padd the end
   zeroes = top_score_reps - len(score_set)
   score_set += [0] * zeroes
@@ -30,20 +29,18 @@ def get_score(station: Station, age: int, reps: int):
   # reverse score_set
   score_set = score_set[::-1]
 
-    
-    
-
-  
   # get the score
   # remember that arrays start with 0 but reps start with 1
   score = score_set[reps - 1]
 
   # get reps needed until next point
   next_point_counter = 0
+
+  # see how many times the particular score is repeated
   for val in score_set[reps:]:
     next_point_counter += 1
     if val != score:
+      # when the score is different, it means a new point has been added
       break
 
   return score, next_point_counter
-
