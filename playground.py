@@ -1,5 +1,5 @@
-from static import Station, get_score
-from run import get_run_score
+# from static import Station, get_score
+# from run import get_run_score
 
 age = 18
 
