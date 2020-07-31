@@ -22,5 +22,3 @@ def get_run_score(age, secs):
   score = running_score_table[age_group][pos]
   return score
 
-
-print(get_run_score(18, 740))
