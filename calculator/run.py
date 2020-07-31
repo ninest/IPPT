@@ -1,5 +1,5 @@
-from .age import get_age_group
-from .data.run import run_times, running_score_table
+from age import get_age_group
+from data.run import run_times, running_score_table
 
 
 def get_run_score(age, secs):
@@ -14,11 +14,20 @@ def get_run_score(age, secs):
   else:
     # round up to nearest 10
     secs = round(secs, -1)
-  
+
   # get the position in the array of the timing
   pos = run_times.index(secs)
-  
+
   # get score
   score = running_score_table[age_group][pos]
-  return score
+
+  # get seconds required to reduce by to next point
+  next_rep_counter = 0
+  for value in running_score_table[age_group][pos:]:
+    if value == score:
+      next_rep_counter += 1
+    else:
+      break
+
+  return score, next_rep_counter
 
