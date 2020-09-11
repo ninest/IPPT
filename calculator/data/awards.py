@@ -3,10 +3,11 @@ from dataclasses import dataclass
 
 @dataclass
 class Award:
-    name: str
-    min_score: int
-    subtitle: str = None
-    cash: int = 0
+    def __init__(self, name, min_score, subtitle=None, cash=0):
+        self.name = name
+        self.min_score = min_score
+        self.subtitle = subtitle
+        self.cash = cash
 
     def to_dict(self):
         return {

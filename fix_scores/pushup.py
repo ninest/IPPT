@@ -1,3 +1,8 @@
+"""
+https://docs.google.com/spreadsheets/d/1kuJngdIQibZ15xWVDkV99Aofn7ATJuYbk8HzZqjv8jc/edit#gid=0
+https://www.ns.sg/web/portal/nsmen/home/nstopics/ippt-ipt-rt/ippt/ippt-stations-and-scoring-system/scoring-calculation
+https://www.nyp.edu.sg/content/dam/nyp/campus-life/cca-activities-and-events/ippt/ippt-teststandards.pdf
+"""
 # from pprint import pprint
 from p_table import pushup_score_table
 
