@@ -1,10 +1,7 @@
-from .age import get_age_group
 from .data.run import run_times, running_score_table
 
 
-def get_run_score(age, secs):
-    age_group = get_age_group(age)
-
+def get_run_score(age_group, secs):
     # check for max or min run times
     if secs > run_times[0]:
         secs = run_times[0]

@@ -1,18 +1,10 @@
-# from static import Station, get_score
-# from run import get_run_score
-from calculator.static import Station, get_static_score
-from calculator.run import get_run_score
+from calculator.ippt import get_score
 
 age = 18
+pushups = 20
+situps = 40
+run_secs = 12 * 60 + 30
 
-pushups = get_static_score(Station.pushup, age=age, reps=20)
+score = get_score(age, pushups, situps, run_secs)
 
-situps = get_static_score(Station.situp, age=age, reps=40)
-
-run = get_run_score(age, 12 * 60 + 30)
-
-print(pushups, situps, run)
-
-total = pushups + situps + run
-
-print(total)
+print(score)
