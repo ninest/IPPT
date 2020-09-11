@@ -28,6 +28,7 @@ def get_score(age, pushups, situps, run_secs):
     for award in awards:
         if total >= award.min_score:
             result = award
+            break
 
     return {
         "pushups": {
