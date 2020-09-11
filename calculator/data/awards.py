@@ -1,7 +1,3 @@
-from dataclasses import dataclass
-
-
-@dataclass
 class Award:
     def __init__(self, name, min_score, subtitle=None, cash=0):
         self.name = name

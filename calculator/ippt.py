@@ -22,6 +22,8 @@ def get_score(age, pushups, situps, run_secs):
         run_secs,
     )
 
+    print(run_score)
+
     total = puhsups_score + situps_score + run_score
 
     # find awards

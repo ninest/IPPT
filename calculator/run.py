@@ -7,7 +7,6 @@ def get_run_score(age_group, secs):
         secs = run_times[0]
     elif secs < run_times[-1]:
         secs = run_times[-1]
-
     else:
         # round up to nearest 10
         secs = round(secs, -1)

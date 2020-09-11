@@ -15,6 +15,10 @@ def get_static_score(station: Station, age_group: int, reps: int):
     # get the score from age group
     score = score_table[age_group][reps - 1]
 
+    # Fix for when station not complete
+    if reps == 0:
+        score = 0
+
     # get additional reps needed to next score
     next_rep_counter = 0
     for value in score_table[age_group][reps:]:
