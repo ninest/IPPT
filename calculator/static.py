@@ -1,8 +1,7 @@
 from enum import Enum, unique
-from age import get_age_group
-
-from data.pushup import pushup_score_table
-from data.situp import situp_score_table
+from .age import get_age_group
+from .data.pushup import pushup_score_table
+from .data.situp import situp_score_table
 
 
 @unique

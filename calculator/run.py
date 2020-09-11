@@ -1,5 +1,5 @@
-from age import get_age_group
-from data.run import run_times, running_score_table
+from .age import get_age_group
+from .data.run import run_times, running_score_table
 
 
 def get_run_score(age, secs):

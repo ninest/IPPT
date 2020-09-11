@@ -9,7 +9,12 @@ class Award:
     cash: int = 0
 
     def to_dict(self):
-        return {"name": self.name, "min_score": self.min_score, "subtitle": self.subtitle, "cash": self.cash}
+        return {
+            "name": self.name,
+            "min_score": self.min_score,
+            "subtitle": self.subtitle,
+            "cash": self.cash,
+        }
 
 
 awards = [

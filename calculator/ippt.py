@@ -1,6 +1,6 @@
-from static import get_static_score, Station
-from run import get_run_score
-from data.awards import awards
+from .static import get_static_score, Station
+from .run import get_run_score
+from .data.awards import awards
 
 
 def get_score(age, pushups, situps, run_secs):
@@ -22,19 +22,27 @@ def get_score(age, pushups, situps, run_secs):
     total = puhsups_score + situps_score + run_score
 
     # find awards
-
     for award in awards:
         if total >= award.min_score:
             result = award
 
     return {
-        "pushups": {"score": puhsups_score, "next": pushups_next_score},
-        "situps": {"score": situps_score, "next": situps_next_score},
-        "run": {"score": run_score, "next": run_next_score},
+        "pushups": {
+            "score": puhsups_score,
+            "next": pushups_next_score,
+        },
+        "situps": {
+            "score": situps_score,
+            "next": situps_next_score,
+        },
+        "run": {
+            "score": run_score,
+            "next": run_next_score,
+        },
         "age": age,
         "total": total,
         "result": result.to_dict(),
     }
 
 
-a = get_score(age=18, pushups=31, situps=37, run_secs=100)
+# a = get_score(age=18, pushups=31, situps=37, run_secs=100)
