@@ -4,10 +4,13 @@
 ## 🤔 Usage
 
 ```
-GET https://ippt.vercel.app/api?age=<age>&situps=<situp reps>&pushups=<pushup reps>&run=<run time>
+GET https://ippt.vercel.app/api?age=<age>&situps=<situps>&pushups=<pushups>&run=<run time>
 ```
 
-where `run time` is the seconds taken to complete the 2.4 km run.
+- `age`: age of IPPT doer
+- `situps`: total situp reps
+- `pushups`: total pushups reps
+- `run time`: **seconds** taken to complete the 2.4 km run.
 
 **Example:**
 
@@ -49,4 +52,17 @@ python playground.py
 ### Testing
 ```
 pipenv run pytest tests
+```
+
+### Hosting
+To host on dev, run
+
+```bash
+vc
+```
+
+To host on production, run
+
+```bash
+vc --prod
 ```
